@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360" role="img" aria-label="Deflake architecture">
+  <rect width="920" height="360" fill="#07090f"/>
+  <text x="24" y="36" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="20" font-weight="700">Deflake architecture</text>
+  <rect x="24" y="60" width="140" height="56" rx="12" fill="#121722" stroke="#7c8cff"/>
+  <text x="94" y="94" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">CLI</text>
+  <rect x="200" y="60" width="140" height="56" rx="12" fill="#121722" stroke="#7c8cff"/>
+  <text x="270" y="94" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Worker pool</text>
+  <rect x="376" y="60" width="160" height="56" rx="12" fill="#121722" stroke="#59d6c2"/>
+  <text x="456" y="94" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Playwright children</text>
+  <rect x="572" y="60" width="140" height="56" rx="12" fill="#121722" stroke="#7c8cff"/>
+  <text x="642" y="94" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Aggregator</text>
+  <rect x="748" y="60" width="148" height="56" rx="12" fill="#121722" stroke="#ffc857"/>
+  <text x="822" y="94" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Reports</text>
+  <path d="M164 88 H200" stroke="#9aa3bd" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M340 88 H376" stroke="#9aa3bd" stroke-width="2"/>
+  <path d="M536 88 H572" stroke="#9aa3bd" stroke-width="2"/>
+  <path d="M712 88 H748" stroke="#9aa3bd" stroke-width="2"/>
+  <rect x="200" y="180" width="160" height="56" rx="12" fill="#121722" stroke="#7c8cff"/>
+  <text x="280" y="214" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">TS rules</text>
+  <rect x="400" y="180" width="160" height="56" rx="12" fill="#121722" stroke="#7c8cff"/>
+  <text x="480" y="214" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Python triager</text>
+  <rect x="600" y="180" width="160" height="56" rx="12" fill="#121722" stroke="#ff5d7a"/>
+  <text x="680" y="214" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Opt-in AI</text>
+  <rect x="300" y="280" width="200" height="56" rx="12" fill="#121722" stroke="#59d6c2"/>
+  <text x="400" y="314" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Next.js dashboard</text>
+  <rect x="540" y="280" width="160" height="56" rx="12" fill="#121722" stroke="#59d6c2"/>
+  <text x="620" y="314" text-anchor="middle" fill="#eef2ff" font-family="Segoe UI,sans-serif" font-size="14">Supabase</text>
+  <path d="M642 116 V180" stroke="#9aa3bd" stroke-width="2"/>
+  <path d="M642 236 V280" stroke="#9aa3bd" stroke-width="2"/>
+  <text x="24" y="340" fill="#9aa3bd" font-family="Segoe UI,sans-serif" font-size="12">by KhyFee · dashboard never launches browsers</text>
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#9aa3bd"/>
+    </marker>
+  </defs>
+</svg>

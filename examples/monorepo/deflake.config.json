@@ -1,0 +1,6 @@
+{
+  "attempts": 10,
+  "workers": 2,
+  "projectDir": "apps/e2e",
+  "failOnFlake": true
+}

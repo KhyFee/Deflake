@@ -1,0 +1,6 @@
+{
+  "attempts": 10,
+  "workers": 2,
+  "failOnFlake": true,
+  "reporters": ["json", "md", "html", "junit", "sarif", "github"]
+}

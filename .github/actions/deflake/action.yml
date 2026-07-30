@@ -1,0 +1,34 @@
+name: Deflake Analyze
+description: Run selected Playwright tests repeatedly and fail on flake
+inputs:
+  grep:
+    description: Playwright grep
+    required: false
+    default: ''
+  attempts:
+    description: Attempt count
+    required: false
+    default: '10'
+  workers:
+    description: Parallel workers
+    required: false
+    default: '2'
+  project-dir:
+    description: Project directory
+    required: false
+    default: '.'
+  fail-on-flake:
+    description: Fail job when flake detected
+    required: false
+    default: 'true'
+runs:
+  using: composite
+  steps:
+    - name: Run Deflake
+      shell: bash
+      working-directory: ${{ inputs.project-dir }}
+      run: |
+        ARGS=(run --attempts "${{ inputs.attempts }}" --workers "${{ inputs.workers }}")
+        if [ -n "${{ inputs.grep }}" ]; then ARGS+=(--grep "${{ inputs.grep }}"); fi
+        if [ "${{ inputs.fail-on-flake }}" = "false" ]; then ARGS+=(--fail-on-flake=false); fi
+        npx --yes @khyfee/deflake "${ARGS[@]}"

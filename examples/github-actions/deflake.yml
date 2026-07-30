@@ -1,0 +1,17 @@
+name: Deflake on PR
+
+on: pull_request
+
+jobs:
+  flake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npx @khyfee/deflake run --grep "critical" --attempts 10
+        env:
+          DEFLAKE_PROJECT_TOKEN: ${{ secrets.DEFLAKE_PROJECT_TOKEN }}

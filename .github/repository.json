@@ -1,0 +1,5 @@
+{
+  "name": "deflake",
+  "description": "Flaky Test Auto-Triager by KhyFee",
+  "topics": ["playwright", "flaky-tests", "ci", "testing", "typescript", "qa"]
+}

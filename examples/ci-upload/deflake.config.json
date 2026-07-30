@@ -1,0 +1,5 @@
+{
+  "attempts": 10,
+  "upload": { "url": "https://deflake.example.com", "tokenEnv": "DEFLAKE_PROJECT_TOKEN" },
+  "reporters": ["json", "md", "github"]
+}

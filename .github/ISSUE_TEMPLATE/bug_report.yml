@@ -1,0 +1,19 @@
+name: Bug report
+description: Something broke
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Deflake version
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Prefer `deflake doctor` (redacted) output

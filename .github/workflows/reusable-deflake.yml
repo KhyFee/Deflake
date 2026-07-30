@@ -1,0 +1,28 @@
+name: Reusable Deflake
+
+on:
+  workflow_call:
+    inputs:
+      project-dir:
+        type: string
+        default: '.'
+      grep:
+        type: string
+        default: ''
+      attempts:
+        type: number
+        default: 10
+
+jobs:
+  deflake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: ./.github/actions/deflake
+        with:
+          project-dir: ${{ inputs.project-dir }}
+          grep: ${{ inputs.grep }}
+          attempts: ${{ inputs.attempts }}
