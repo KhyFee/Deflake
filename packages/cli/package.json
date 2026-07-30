@@ -1,0 +1,55 @@
+{
+  "name": "@khyfee/deflake",
+  "version": "0.1.0",
+  "description": "Flaky Test Auto-Triager — parallel Playwright attempts + statistical + AI triage",
+  "type": "module",
+  "bin": {
+    "deflake": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test src/**/*.test.ts",
+    "demo": "tsx src/cli.ts demo",
+    "cli": "tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@khyfee/deflake-core": "*",
+    "@khyfee/deflake-reporters": "*"
+  },
+  "author": "KhyFee (https://github.com/KhyFee)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KhyFee/Deflake.git"
+  },
+  "homepage": "https://github.com/KhyFee/Deflake#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "playwright",
+    "flake",
+    "flaky",
+    "qa",
+    "ci",
+    "deflake"
+  ]
+}
