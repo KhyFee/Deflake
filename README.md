@@ -44,7 +44,7 @@ Zero-config: works without Python, AI keys, or a database. Those enhance output 
 
 ## Architecture
 
-![Architecture](docs/architecture.svg)
+![Deflake architecture](https://raw.githubusercontent.com/KhyFee/Deflake/main/docs/architecture.svg)
 
 CLI workers launch isolated Playwright children. Aggregation and reporters are TypeScript. Python triage is optional. The Next.js dashboard never runs browsers — it stores signed results.
 
