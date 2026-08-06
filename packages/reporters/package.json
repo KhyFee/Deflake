@@ -20,7 +20,7 @@
   "author": "KhyFee (https://github.com/KhyFee)",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.8.2"
+    "typescript": "^7.0.2"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
