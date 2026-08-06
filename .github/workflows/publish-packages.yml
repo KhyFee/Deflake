@@ -1,0 +1,33 @@
+﻿# Publish @khyfee/deflake* to GitHub Packages (npm)
+# Token must resolve as user KhyFee (personal PAT with write:packages)
+# or use GITHUB_TOKEN only if package scope matches repo owner.
+name: Publish packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@khyfee'
+      - run: npm ci || npm install
+      - run: npm run build -w @khyfee/deflake-core && npm run build -w @khyfee/deflake-reporters && npm run build -w @khyfee/deflake
+      - name: Publish to GitHub Packages
+        # Prefer user PAT so @khyfee scope is allowed; falls back to GITHUB_TOKEN (may 403 for scope mismatch)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PACKAGE_TOKEN != '' && secrets.PACKAGE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          npm publish -w @khyfee/deflake-core --access public
+          npm publish -w @khyfee/deflake-reporters --access public
+          npm publish -w @khyfee/deflake --access public

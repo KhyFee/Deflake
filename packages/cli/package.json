@@ -1,7 +1,7 @@
 {
   "name": "@khyfee/deflake",
   "version": "0.1.0",
-  "description": "Flaky Test Auto-Triager — parallel Playwright attempts + statistical + AI triage",
+  "description": "Flaky Test Auto-Triager \u2014 parallel Playwright attempts + statistical + AI triage",
   "type": "module",
   "bin": {
     "deflake": "./dist/cli.js"
@@ -26,16 +26,16 @@
     "cli": "tsx src/cli.ts"
   },
   "dependencies": {
-    "@khyfee/deflake-core": "*",
-    "@khyfee/deflake-reporters": "*"
+    "@khyfee/deflake-core": "0.1.0",
+    "@khyfee/deflake-reporters": "0.1.0"
   },
   "author": "KhyFee (https://github.com/KhyFee)",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KhyFee/Deflake.git"
+    "url": "git+https://github.com/asyncapps-hq/Deflake.git"
   },
-  "homepage": "https://github.com/KhyFee/Deflake#readme",
+  "homepage": "https://github.com/asyncapps-hq/Deflake#readme",
   "devDependencies": {
     "@types/node": "^22.13.10",
     "tsx": "^4.19.3",
@@ -51,5 +51,11 @@
     "qa",
     "ci",
     "deflake"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "bugs": {
+    "url": "https://github.com/asyncapps-hq/Deflake/issues"
+  }
 }
