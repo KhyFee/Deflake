@@ -54,7 +54,15 @@ Expect **exit code 2** when the intentional flaky suite is detected. Artifacts l
 
 Zero-config: works without Python, AI keys, or a database. Those only **enhance** output when present.
 
-> **npm package:** the monorepo ships `@khyfee/deflake` as a workspace package. Public `npm i -g @khyfee/deflake` is **not published yet** — use the clone path above. Star the repo if you want npm packaging prioritized.
+> **Packages:** monorepo packages are `@khyfee/deflake` (+ core / reporters).  
+> **GitHub Packages (npm):** configured — needs a token with `write:packages` once, then:
+> ```bash
+> # .npmrc
+> @khyfee:registry=https://npm.pkg.github.com
+> //npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+> npm i @khyfee/deflake
+> ```
+> npmjs.org global `npx @khyfee/deflake` still pending public registry publish.
 
 ---
 
