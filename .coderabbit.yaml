@@ -1,0 +1,25 @@
+# CodeRabbit review defaults — install the GitHub App:
+# https://github.com/apps/coderabbitai
+language: en-US
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: true
+  path_filters:
+    - '!**/package-lock.json'
+    - '!**/*.svg'
+    - '!**/.deflake/**'
+  path_instructions:
+    - path: 'packages/**'
+      instructions: |
+        Focus on correctness, flake detection edge cases, and CI ergonomics.
+        Prefer small, reviewable diffs over speculative abstractions.
+    - path: 'docs/**'
+      instructions: Keep docs accurate and copy-paste friendly.
+    - path: '.github/**'
+      instructions: Prefer pin-compatible Action versions and least privilege permissions.
+chat:
+  auto_reply: true

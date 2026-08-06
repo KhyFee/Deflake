@@ -6,9 +6,12 @@
 
 Parallel isolated retries · Wilson stats · evidence packs · optional AI (redacted only)
 
+[![CI](https://img.shields.io/github/actions/workflow/status/KhyFee/Deflake/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/KhyFee/Deflake/actions/workflows/ci.yml)
+[![CodeQL](https://img.shields.io/github/actions/workflow/status/KhyFee/Deflake/codeql.yml?branch=main&style=for-the-badge&label=CodeQL)](https://github.com/KhyFee/Deflake/actions/workflows/codeql.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 [![Node 20+](https://img.shields.io/badge/Node-20%2B-0ea5e9?style=for-the-badge&logo=nodedotjs&logoColor=white)](package.json)
 [![Playwright](https://img.shields.io/badge/Playwright-ready-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)](https://playwright.dev)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 [![GitHub](https://img.shields.io/badge/github-KhyFee%2FDeflake-a78bfa?style=for-the-badge&logo=github)](https://github.com/KhyFee/Deflake)
 
 **One command proves the flake** (local demo — no keys, no DB, no cloud):

@@ -1,0 +1,25 @@
+# Keep npm + Actions on a short leash without manual bumps
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 8
+    labels:
+      - dependencies
+    groups:
+      production:
+        dependency-type: production
+      development:
+        dependency-type: development
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies

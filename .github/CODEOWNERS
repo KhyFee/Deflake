@@ -1,0 +1,7 @@
+# Default review owner for everything in this repo
+* @KhyFee
+
+# Stricter eyes on release + security surfaces
+/.github/ @KhyFee
+/packages/cli/ @KhyFee
+/SECURITY.md @KhyFee
